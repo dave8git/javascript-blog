@@ -164,16 +164,13 @@ function tagClickHandler(event) {
   generateTitleLinks('[data-tags~="' + tag + '"]');
 }
 
-tagClickHandler();
-
 function addClickListenersToTags() {
   /* find all links to tags */
-
-  /* START LOOP: for each link */
-
-  /* add tagClickHandler as event listener for that link */
-
-  /* END LOOP: for each link */
+  const tags = document.querySelectorAll('[href^="#tag-"]');
+  console.log(tags);
+  for (let tag of tags) {
+    tag.addEventListener('click', tagClickHandler);
+  }
 }
 
 addClickListenersToTags();

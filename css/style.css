@@ -107,4 +107,10 @@ body {
 .post-tags p {
   margin: 0 10px 0 0;
 }
+
+.tag-size-5 {
+  display: inline-block;
+  font-size: 25px;
+  color: orange;
+}
 /*# sourceMappingURL=style.css.map */

@@ -121,6 +121,36 @@ body {
 
 .tag-size-5 {
   display: inline-block;
-  font-size: 25px;
+  font-size: 50px;
   color: orange;
+  font-weight: bold;
+}
+
+.tag-size-4 {
+  display: inline-block;
+  font-size: 40px;
+  color: blue;
+  font-weight: bold;
+}
+
+.tag-size-3 {
+  font-size: 30px;
+  color: yellow;
+  font-weight: bold;
+}
+
+.tag-size-2 {
+  font-size: 20px;
+  color: blue;
+  font-weight: bold;
+}
+
+.tag-size-1 {
+  font-size: 15px;
+  color: greenyellow;
+  font-weight: bold;
+}
+
+.tags li {
+  display: inline-block;
 }

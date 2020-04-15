@@ -143,6 +143,7 @@ function addClickListenersToTags() {
 addClickListenersToTags();
 
 function generateAuthors() {
+  let allAuthors = {};
   const articles = document.querySelectorAll(optArticleSelector);
   for (let article of articles) {
     const authorsWrapper = article.querySelector(optArticleAuthorSelector);
@@ -151,7 +152,13 @@ function generateAuthors() {
     html = '<a href="#author-' + author + '">' + author + '</a>';
     // console.log(html);
     authorsWrapper.insertAdjacentHTML('beforeend', html);
+    if(!allAuthors.hasOwnProperty(author)) {
+      allAuthors[author] = 1;
+    } else {
+      allAuthors[author]++;
+    }
   }
+  console.log('allAuthors:', allAuthors);
 }
 generateAuthors();
 

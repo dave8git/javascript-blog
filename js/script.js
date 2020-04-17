@@ -1,5 +1,7 @@
 'use strict';
-
+const templates = {
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+}
 function titleClickHandler(event) {
   event.preventDefault();
   const clickedElement = this;
@@ -36,7 +38,9 @@ function generateTitleLinks(customSelector = '') {
   for (let article of articles) { // for each article
     const articleId = article.getAttribute('id'); // get the article id
     const articleTitle = article.querySelector(optTitleSelector).innerHTML; // find the title element // get the title from the titile element
-    linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>'; // create HTML of the link
+    //linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>'; // create HTML of the link
+    const linkHTMLData = {id: articleId, title: articleTitle};
+    const linkHTML = templates.articleLink(linkHTMLData);
     titleList.insertAdjacentHTML('beforeend', linkHTML);
   }
   // console.log(linkHTML);

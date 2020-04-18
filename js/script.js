@@ -1,6 +1,8 @@
 'use strict';
 const templates = {
-  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
+  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML),
+  authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML)
 }
 function titleClickHandler(event) {
   event.preventDefault();
@@ -87,8 +89,10 @@ function generateTags() {
     const articleTagsArray = articleTags.split(' '); // split tags into array
     for (let tag of articleTagsArray) { // START LOOP: for each tag
       // console.log('splitTags:' + splitTags);
-      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>'; // generate HTML of the link
-      html += linkHTML; // add generated code to html variable
+      const tagHTMLData = {id: tag, title: tag};
+      const tagHTML = templates.articleLink(tagHTMLData); 
+      //const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>'; // generate HTML of the link
+      html += tagHTML; // add generated code to html variable
       if (!allTags.hasOwnProperty(tag)) { //(allTags.indexOf(htmlLink) == -1) { // add generated code to allTags array
         // console.log('allTags: ', allTags);
         allTags[tag] = 1; // allTags.push(htmlLink); // add generated code to allTags array
@@ -170,9 +174,11 @@ function generateAuthors() {
     const authorsWrapper = article.querySelector(optArticleAuthorSelector);
     let html = '';
     const author = article.getAttribute('data-author');
-    html = '<a href="#author-' + author + '">' + author + '</a>';
+    //html = '<a href="#author-' + author + '">' + author + '</a>';
+    const authorsHTMLData = {id: author, title: author};
+    const authorsHTML = templates.articleLink(authorsHTMLData); 
     // console.log(html);
-    authorsWrapper.insertAdjacentHTML('beforeend', html);
+    authorsWrapper.insertAdjacentHTML('beforeend', authorsHTML);
     if(!allAuthors.hasOwnProperty(author)) {
       allAuthors[author] = 1;
     } else {

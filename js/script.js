@@ -184,7 +184,7 @@ function generateAuthors() {
   let allAuthorsHTML = '';
   let authorLinkHTML = '';
   for (let author in allAuthors) {
-    authorLinkHTML = '<li><a class="' + optCloudClassPrefix + calculateTagClass(allAuthors[author], authorsParams) + '" href="#tag-' + author + '">' + author + '</a></li>' + ' ';
+    authorLinkHTML = '<li><a href="#tag-' + author + '">' + author + ' ' + '(' + calculateTagClass(allAuthors[author], authorsParams) + ')' + '</a></li>' + ' '; 
     console.log('authorLinkHTML:', authorLinkHTML);
     allAuthorsHTML += authorLinkHTML;
   }

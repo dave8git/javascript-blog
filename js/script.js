@@ -226,11 +226,9 @@ function authorClickHandler(event) {
 function addClickListenersToAuthors() {
   const authorTags = document.querySelectorAll('a[href^="#author-"]');
   // console.log(authorTags);
+
   for (let authorTag of authorTags) {
     authorTag.addEventListener('click', authorClickHandler);
   }
 }
 addClickListenersToAuthors();
-
-
-

@@ -20,7 +20,7 @@
                     </ul>
                 </aside>
                 <section class="posts">
-                    <article class="post active" id="article-1" data-tags="cat careless scissors" data-author="Marion Berry">
+                    <article class="post active" id="article-1" data-tags="carton boxer careless scissors" data-author="Marion Berry">
                         <h3 class="post-title">Article 1</h3>
                         <p class="post-author"><!-- by Marion Berry --></p>
                         <div class="post-content">
@@ -43,7 +43,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-2" data-tags="cat carousel scissors" data-author="Theo Tabby">
+                    <article class="post" id="article-2" data-tags="boxer bing carousel scissors" data-author="Theo Tabby">
                         <h3 class="post-title">Article 2</h3>
                         <p class="post-author"><!-- by Theo Tabby--></p>
                         <div class="post-content">
@@ -66,7 +66,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-3" data-tags="cat cactus caregiver" data-author="George Tuxedo">
+                    <article class="post" id="article-3" data-tags="cat cactus caregiver chinese democracy" data-author="George Tuxedo">
                         <h3 class="post-title">Article 3</h3>
                         <p class="post-author"><!-- by George Tuxedo --></p>
                         <div class="post-content">
@@ -86,7 +86,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-4" data-tags="cat cactus car" data-author="Kitty Toebean">
+                    <article class="post" id="article-4" data-tags="cat chinese caregiver cactus car" data-author="Kitty Toebean">
                         <h3 class="post-title">Article 4</h3>
                         <p class="post-author"><!-- by Kitty Toebean --></p>
                         <div class="post-content">
@@ -108,7 +108,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-5" data-tags="cat cork scissors" data-author="Marion Berry">
+                    <article class="post" id="article-5" data-tags="cat caterpillar cork scissors democracy" data-author="Marion Berry">
                         <h3 class="post-title">Article 5</h3>
                         <p class="post-author"><!-- by Marion Berry --></p>
                         <div class="post-content">
@@ -129,7 +129,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-6" data-tags="container cactus scissors" data-author="George Tuxedo">
+                    <article class="post" id="article-6" data-tags="container democracy cactus scissors" data-author="George Tuxedo">
                         <h3 class="post-title">Article 6</h3>
                         <p class="post-author"><!-- by George Tuxedo --></p>
                         <div class="post-content">
@@ -152,7 +152,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-7" data-tags="cat cactus cork" data-author="Kitty Toebean">
+                    <article class="post" id="article-7" data-tags="cactus boxer cork" data-author="Kitty Toebean">
                         <h3 class="post-title">Article 7</h3>
                         <p class="post-author"><!-- by Kitty Toebean --></p>
                         <div class="post-content">
@@ -174,7 +174,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-8" data-tags="container cactus scissors" data-author="Theo Tabby">
+                    <article class="post" id="article-8" data-tags="container bing carton cactus scissors" data-author="Theo Tabby">
                         <h3 class="post-title">Article 8</h3>
                         <p class="post-author"><!-- by Theo Tabby --></p>
                         <div class="post-content">
@@ -197,7 +197,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-9" data-tags="cat cactus caterpillar" data-author="Marion Berry">
+                    <article class="post" id="article-9" data-tags="bing democracy cactus carton caterpillar" data-author="Marion Berry">
                         <h3 class="post-title">Article 9</h3>
                         <p class="post-author"><!-- by Marion Berry --></p>
                         <div class="post-content">
@@ -220,7 +220,7 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="post" id="article-10" data-tags="cat caterpillar scissors" data-author="George Tuxedo">
+                    <article class="post" id="article-10" data-tags="caterpillar carton boxer chinese scissors" data-author="George Tuxedo">
                         <h3 class="post-title">Article 10</h3>
                         <p class="post-author"><!-- by George Tuxedo --></p>
                         <div class="post-content">
@@ -250,15 +250,15 @@
                 <aside class="sidebar">
                     <h2 class="section-title">Tags</h2>
                     <ul class="list tags">
-                        <li><a href="#">design</a> <span>(6)</span></li>
+                        <!--li><a href="#">design</a> <span>(6)</span></li>
                         <li><a href="#">code</a> <span>(5)</span></li>
                         <li><a href="#">tutorials</a> <span>(4)</span></li>
                         <li><a href="#">reviews</a> <span>(4)</span></li>
-                        <li><a href="#">news</a> <span>(6)</span></li>
+                        <li><a href="#">news</a> <span>(6)</span></li-->
                     </ul>
                     <h2 class="section-title">Authors</h2>
                     <ul class="list authors">
-                        <li>
+                        <!-- li>
                             <a href="#">
                                 <span class="author-name">Kitty Toebean</span>
                             </a>
@@ -278,11 +278,33 @@
                                 <span class="author-name">Marion Berry</span>
                             </a>
                         </li>
-                    </ul>
+                    </ul-->
+                  </ul>
                 </aside>
             </main>
         </div>
     </div>
 </body>
+<script id="template-article-link" type="text/x-handlebars-template">
+    <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+</script>
+<script id="template-tag-link" type="text/x-handlebars-template">
+    <li><a href="#tag-{{ id }}">{{ title }}</a></li>
+</script>
+<script id="template-author-link" type="text/x-handlebars-template">
+    <a href="#author-{{ id }}">{{ title }}</a>
+</script>
+<script id="template-tag-cloud-link" type="text/x-handlebars-template">
+    {{#each tags}}
+        <li><a class="{{ className }}" href="#tag-{{ tag }}">{{ tag }} <!--({{count}})--></a></li>
+    {{/each}}
+</script>
+<script id="template-authors-cloud-link" type="text/x-handlebars-template">
+    {{#each authors}}
+        <li><a href="#author-{{ author }}">{{ author }} ({{ count }}) </a></li>
+    {{/each}}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 <script src="js/script.js"></script>
 </html>
+
